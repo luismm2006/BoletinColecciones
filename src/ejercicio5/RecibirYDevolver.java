@@ -14,7 +14,7 @@ public class RecibirYDevolver {
         List<String> palabras = new ArrayList<>(Arrays.asList("hola", "mundo", "hola", "java"));
         System.out.println(eliminarDuplicados(palabras));
     }
-	public static <T> List<T> eliminarDuplicados(List<T> lista){
+	public static  <T> List<T> eliminarDuplicados(List<T> lista){
 		Set<T> grupo = new HashSet<>(lista);
 		return new ArrayList<T>(grupo);
 	}
