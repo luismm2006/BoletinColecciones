@@ -2,6 +2,7 @@ package ejercicio3;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class NumerosOrdenadosCreciente {
 
@@ -17,11 +18,8 @@ public class NumerosOrdenadosCreciente {
 			}
 	    	lista.add(i, numero);
 	    }
-	    public void mostrarLista() {
-	        for (int num : lista) {
-	            System.out.print(num + " ");
-	        }
-	        System.out.println();
+	    public List<Integer> obtenerLista() {
+	        return new ArrayList<>(lista);
 	    }
 
 	    public static void main(String[] args) {
@@ -34,6 +32,6 @@ public class NumerosOrdenadosCreciente {
 	    	NumerosOrdenadosCreciente.agregarNumero(7);
 	    	NumerosOrdenadosCreciente.agregarNumero(5); 
 
-	    	NumerosOrdenadosCreciente.mostrarLista();  
+	    	System.out.println(NumerosOrdenadosCreciente.obtenerLista());
 	    }
 }

@@ -2,6 +2,7 @@ package ejercicio4;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class NumerosOrdenadosCrecientementeEXT<T extends Comparable<T>>{
 
@@ -17,11 +18,8 @@ public class NumerosOrdenadosCrecientementeEXT<T extends Comparable<T>>{
 			}
 	    	lista.add(i, elemento);
 	    }
-	    public void mostrarLista() {
-	        for (T elem : lista) {
-	            System.out.print(elem + " ");
-	        }
-	        System.out.println();
+	    public ArrayList<T> obtenerLista() {
+	        return new ArrayList<>(lista); 
 	    }
 
 	    public static void main(String[] args) {
@@ -34,7 +32,7 @@ public class NumerosOrdenadosCrecientementeEXT<T extends Comparable<T>>{
 	    	NumerosOrdenadosCrecientementeEXT.agregarelemento(7);
 	    	NumerosOrdenadosCrecientementeEXT.agregarelemento(5); 
 
-	    	NumerosOrdenadosCrecientementeEXT.mostrarLista();  
+	    	NumerosOrdenadosCrecientementeEXT.obtenerLista();  
 	    	
 	    	NumerosOrdenadosCrecientementeEXT<String> CadenasOrdenadasCrecientementeEXT = new NumerosOrdenadosCrecientementeEXT<>();
 	    	CadenasOrdenadasCrecientementeEXT.agregarelemento("Banana");
@@ -42,6 +40,6 @@ public class NumerosOrdenadosCrecientementeEXT<T extends Comparable<T>>{
 	    	CadenasOrdenadasCrecientementeEXT.agregarelemento("Cereza");
 	    	CadenasOrdenadasCrecientementeEXT.agregarelemento("Kiwi");
 	    	CadenasOrdenadasCrecientementeEXT.agregarelemento("Uva");
-	    	CadenasOrdenadasCrecientementeEXT.mostrarLista();
+	    	CadenasOrdenadasCrecientementeEXT.obtenerLista();
 	    }
 }

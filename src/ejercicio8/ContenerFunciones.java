@@ -25,7 +25,7 @@ public class ContenerFunciones {
 			suma += num;
 		}
     	double media = suma / lista.size();
-    	return media;
+    	return (double) suma / lista.size();
     }
     public int mediana() {
     	int mediana = 0;
@@ -60,7 +60,7 @@ public class ContenerFunciones {
         for (int num : lista) {
             sumaCuadrados += Math.pow(num - media, 2);
         }
-        return sumaCuadrados/(lista.size() - 1);
+        return sumaCuadrados / (lista.size() - 1);
     }
     public static void main(String[] args) {
         List<Integer> numeros = List.of(45, 12, 78, 34, 89, 23, 67, 90);

@@ -2,7 +2,7 @@ package ejercicio6;
 
 import java.util.*;
 
-class ContadorPalabras {
+public class ContadorPalabras {
     private String frase;
 
     // Constructor
